@@ -1,20 +1,29 @@
 .Buttons1 {
-    background-color: rgb(0, 174, 255);
-    color: cyan;
-    border: 2px solid cyan;
+    background-color: #1b4543;
+    color: #35958e;
+    border: 2px solid #35958e;
+    height: 40px;
+    width: 130px;
+    font-size: 20px;
 }
 
-#menu {
+.Buttons1:hover {
+    cursor: pointer;
+    background-color: #186b67;
+}
+
+.menu {
     height: 100%;
     width: 100%;
     position: absolute;
     top: 0;
     left: 0;
-    background-color: rgb(76, 76, 76);
+    background-color: #413e35;
+    user-select: none;
 }
 
-#menubox {
-    background-color: rgb(60, 60, 60);
+.menubox {
+    background-color: #2f312c;
     width: 65%;
     height: 70%;
     left: 0;
@@ -22,4 +31,41 @@
     margin-inline: auto;
     position: absolute;
     top: 15%;
+    padding-left: 30px;
+}
+
+.menubox button {
+    margin-bottom: 15px;
+}
+
+.menubox h1 {
+    font-size: 50px;
+    color: white;
+    font-family: 'Calibri';
+}
+.menubox h3 {
+    font-size: 25px;
+    color: white;
+    font-family: 'Calibri';
+}
+#menubox1 h4 {
+    margin-top: 23%;
+    color: white;
+    overflow: hidden;
+}
+#menubox-authors h4 {
+    color: white;
+    font-family: 'Calibri';
+    overflow: hidden;
+}
+
+.menu-img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 70%;
+}
+
+#menu-authors {
+    visibility: hidden;
 }
