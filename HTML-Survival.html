@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML PostApo</title>
     <link rel="stylesheet" href="Sources/htmlsurv_styl.css">
+    <link rel="shortcut icon" href="Materials/boreas.png" type="image/x-icon">
 </head>
 <body>
     <section class="menu" id="menu1">
@@ -13,24 +14,54 @@
             <button onclick="startNew()" class="Buttons1">Nowa Gra</button><br>
             <button onclick="gotoLoading()" class="Buttons1">Wczytaj Grę</button><br>
             <button onclick="showAuthors()" class="Buttons1">Twórcy</button>
-            <h4>v0.1</h4>       <!-- AKTUALIZUJ ZA KAŻDYM RAZEM!!!!!!!!!!!!!!!! -->
-            <img src="temp/placeholder.webp" alt="PLACEHOLDER" class="menu-img">
+            <h4>v0.1 (indev)</h4>       <!-- AKTUALIZUJ ZA KAŻDYM RAZEM!!!!!!!!!!!!!!!! -->
+            <img src="Materials/boreas.png" alt="HTML PostApo" class="menu-img" id="img-menu1">
         </section>
     </section>
     <section class="menu" id="menu-authors">
         <section id="menubox-authors" class="menubox">
             <h1>Twórcy</h1>
-            <h3>CornSeller - Ogólnie kod gry</h3>
-            <h3>a.gent.leman - Elementy wizualne</h3>
+            <h3>CornSeller - Kod oraz design gry</h3>
+            <h3>a.gent.leman - Grafika postaci niezależnych</h3>
+            <h3><i>Gra używa dużo nielicencjonowanych<br>grafik i muzyki pokroju royalty-free.Kontent<br>w niektórych przypadkach mógł zostać lekko zedytowany.</i></h3>
             <h4>Używa silnika Move (w wersji v1.2 lub eksperymentalnej)</h4>
             <img src="Materials/move-logo.png" alt="Move v1.2 by CornSeller" style="height: 40px;"><br><br>
             <a href="https://github.com/CornSeller69/Simple-PostApo/" target="_blank"><button id="returnMenu" class="Buttons1">GitHub</button></a><br>
-            <button id="returnMenu" onclick="returnMenu()" class="Buttons1">Powrót</button>
+            <button onclick="returnMenu()" class="Buttons1">Powrót</button>
+            <img src="Materials/weezer.png" alt="Weezer" class="menu-img">
+        </section>
+    </section>
+    <section class="menu" id="menu-load">
+        <section id="menubox-load" class="menubox">
+            <h1>Wczytaj grę</h1>
+            <h3>Załaduj grę ze swojego pliku .hpasave</h3>
+            <section style="background-color: #1b4543; color: #35958e; border: 2px solid #35958e; width: 35%;"><input type="file" id="file-input" style="cursor: alias;"></section>
+            <button onclick="loadData()" class="Buttons1" style="width: 35.3%;">Wczytaj plik</button><br>
+            <button onclick="returnMenu()" class="Buttons1">Powrót</button>
             <img src="temp/placeholder.webp" alt="PLACEHOLDER" class="menu-img">
         </section>
     </section>
 </body>
 <script src="Sources/engine.js"></script>
+<script src="Sources/data-system.js"></script>
 <script src="Sources/htmlsurv.js"></script>
 <script src="Sources/values.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+        const image = geid('img-menu1');
+        let userInput = '';
+        let easterEggActive = true;  // Flag to control the easter egg
+    
+        document.addEventListener('keydown', (event) => {
+            if (easterEggActive) {
+                userInput += event.key.toLowerCase();
+                if (userInput.includes('ciupaga')) {
+                    image.src = 'Materials/ciupaj.png';  // Change this to the new image source
+                    userInput = '';  // Reset input
+                    sfx_piano.play();
+                }
+            }
+        });
+        });
+</script>    
 </html>
