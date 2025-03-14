@@ -49,14 +49,17 @@
     font-family: 'Calibri';
 }
 #menubox1 h4 {
-    margin-top: 23%;
+    bottom: 2%;
+    position: absolute;
     color: white;
-    overflow: hidden;
 }
 #menubox-authors h4 {
     color: white;
     font-family: 'Calibri';
     overflow: hidden;
+}
+#menubox-authors {
+    overflow: scroll;
 }
 
 .menu-img {
@@ -66,6 +69,26 @@
     height: 70%;
 }
 
-#menu-authors,#menu-load {
+#menu-authors,#menu-load,#menu-newgay {
     visibility: hidden;
+}
+
+#charname {
+    background-color: #1b4543;
+    color: #35958e;
+    border: 2px solid #35958e;
+    height: 40px;
+    width: 400px;
+    font-size: 20px;
+}
+
+#radiotxt {
+    background-color: #1b4543;
+    color: #35958e;
+    border: 2px solid #35958e;
+    min-height: 35px;
+    max-height: 40px;
+    width: 250px;
+    font-size: 20px;
+    font-family: 'Calibri';
 }

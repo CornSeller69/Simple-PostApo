@@ -11,3 +11,5 @@ const mus_subway = new Audio('Materials/Music/subway.ogg'); mus_subway.loop = tr
 const sfx_piano = new Audio('Materials/Sounds/Misc/riff.mp3');
 
 // Zmienne:
+let playername = "John"; // Nazwa postaci gracza
+let playersex = 0; // Płeć postaci, 0 = mężczyzna, 1 = kobieta

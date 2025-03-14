@@ -1,6 +1,9 @@
 function saveData() {
       w("Saving game data...");
-      let data = `placeholder`; // set data here later lmao
+      let data = `
+      playername = ${playername};
+      playersex = ${playersex};
+      `;
       let filename = geid('nazwapliku').value + ".hpasave";
       const blob = new Blob([data], { type: 'text/plain' });
       const link = document.createElement('a');
