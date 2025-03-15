@@ -7,7 +7,7 @@
     font-size: 20px;
 }
 
-.Buttons1:hover {
+.Buttons1:hover,.Buttons2:hover {
     cursor: pointer;
     background-color: #186b67;
 }
@@ -59,7 +59,8 @@
     overflow: hidden;
 }
 #menubox-authors {
-    overflow: scroll;
+    overflow-y: visible;
+    overflow-x: hidden;
 }
 
 .menu-img {
@@ -69,7 +70,7 @@
     height: 70%;
 }
 
-#menu-authors,#menu-load,#menu-newgay {
+#menu-authors,#menu-load,#menu-newgay,#game-area,#global-map {
     visibility: hidden;
 }
 
@@ -91,4 +92,51 @@
     width: 250px;
     font-size: 20px;
     font-family: 'Calibri';
+}
+
+.mapy {
+    width: 15%;
+    height: 20%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.gamescreen {
+    width: 85%;
+    height: 80%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-image: url('../Materials/imgbg.png');
+    background-repeat: repeat;
+}
+
+.optionbox {
+    width: 85%;
+    height: 20%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.sidebar {
+    width: 15%;
+    height: 80%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.mapy,.sidebar,.optionbox {
+    background-color: #35322b;
+}
+
+.Buttons2 {
+    background-color: #1b4543;
+    color: #35958e;
+    border: 2px solid #35958e;
+    height: 40px;
+    width: 100%;
+    font-size: 20px;
 }

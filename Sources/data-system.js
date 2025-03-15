@@ -39,4 +39,5 @@ function loadData() {
       } else {
             w('No file selected');
       }
+      startGame2();
 }
